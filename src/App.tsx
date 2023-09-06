@@ -12,7 +12,7 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <div>
           <nav>
-            <NavLink to="/">
+            <NavLink to="/" rel="nm">
               <li>Home</li>
             </NavLink>{" "}
             <NavLink to="/about">
