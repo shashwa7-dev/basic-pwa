@@ -10,6 +10,7 @@ const fonts = {
   heading: `var(--heading-font)`,
   body: `var(--body-font)`,
 };
+
 const styles = {
   global: {
     // styles for the `body`

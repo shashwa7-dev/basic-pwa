@@ -18,8 +18,8 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
         purpose: "monochrome",
       },
       {
-        src: "/android-chrome-256x256.png",
-        sizes: "256x256",
+        src: "/android-chrome-512x512.png",
+        sizes: "512x512",
         type: "image/png",
         purpose: "any",
       },
@@ -30,8 +30,8 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
         purpose: "any",
       },
       {
-        src: "/maskable_icon.svg",
-        sizes: "225x225",
+        src: "/maskable_icon.png",
+        sizes: "271x271",
         type: "image/png",
         purpose: "maskable",
       },
