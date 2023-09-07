@@ -11,7 +11,8 @@ const AppLayout = () => {
       maxW={"500px"}
       mx="auto"
       pos={"relative"}
-      pb={'5rem'} //navbar-height padding
+      background={"brand.primary"}
+      pb={"5rem"} //navbar-height padding
     >
       <Appbar />
       <Suspense fallback={<div>Loading...</div>}>

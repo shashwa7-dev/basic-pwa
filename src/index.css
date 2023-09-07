@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Heading Font";
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/ClashGrotesk-Variable.ttf");
+}
+@font-face {
+  font-family: "Body Font";
+  font-weight: 500;
+  font-display: swap;
+  src: url("./assets/fonts/ClashGrotesk-Variable.ttf");
+}
+:root {
+  --body-font: "Body Font", sans-serif;
+  --heading-font: "Heading Font", sans-serif;
+}
 *,
 *::before,
 *::after {

@@ -6,11 +6,15 @@ const config: ThemeConfig = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 };
+const fonts = {
+  heading: `var(--heading-font)`,
+  body: `var(--body-font)`,
+};
 const styles = {
   global: {
     // styles for the `body`
     body: () => ({
-      bg: colors.brand.primary,
+      bg: colors.brand.black,
       color: colors.brand.white,
     }),
   },
@@ -85,6 +89,6 @@ const colors = {
   },
 };
 // 3. extend the theme
-const theme = extendTheme({ config, styles, colors });
+const theme = extendTheme({ config, styles, colors, fonts });
 
 export default theme;
