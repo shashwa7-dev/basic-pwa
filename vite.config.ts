@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
 import path from "path";
@@ -46,10 +46,16 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
 };
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: "./",
-  plugins: [react(), VitePWA(manifestForPlugin)],
-  resolve: {
-    alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
-  },
-});
+export default ({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+  return defineConfig({
+    base: "./",
+    plugins: [react(), VitePWA(manifestForPlugin)],
+    resolve: {
+      alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
+    },
+    define: {
+      "process.env": env,
+    },
+  });
+};
